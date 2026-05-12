@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NoteNova Premium</title>
+
+  <link rel="stylesheet" href="s.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <h1 class="brand-title">
+
+      <span class="logo-n-nav">
+
+        <img src="bcaecf6e-263d-4a7d-95c4-0d7856e9bc27.png" alt="Logo">
+
+      </span>
+
+      oteNova AI
+
+    </h1>
+
+    <nav>
+
+      <a href="Home.html">Home</a>
+
+      <a href="product.html">Product</a>
+
+      <a href="test.html">Management</a>
+
+      <a href="sub.html">Premium</a>
+
+      <a href="c2.html">Contact</a>
+
+      <span id="authArea"></span>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+
+        Upgrade To Premium
+
+      </h1>
+
+      <p>
+
+        Unlock advanced AI features,
+        unlimited note generation,
+        cloud synchronization,
+        and priority processing.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- PLAN -->
+
+  <section class="pricing-section">
+
+    <div class="pricing-card">
+
+      <div class="premium-badge">
+
+        MOST POPULAR
+
+      </div>
+
+      <h2>
+
+        NoteNova Premium
+
+      </h2>
+
+      <div class="price">
+
+        ₹500
+
+        <span>
+
+          /month
+
+        </span>
+
+      </div>
+
+      <ul>
+
+        <li>
+          ✔ Unlimited AI Notes
+        </li>
+
+        <li>
+          ✔ Smart AI Summaries
+        </li>
+
+        <li>
+          ✔ Faster AI Processing
+        </li>
+
+        <li>
+          ✔ Unlimited Cloud Backup
+        </li>
+
+        <li>
+          ✔ Cross Device Sync
+        </li>
+
+        <li>
+          ✔ Early Access Features
+        </li>
+
+      </ul>
+
+      <a href="payment.html" class="subscribe-btn">
+
+        Get Premium
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- BENEFITS -->
+
+  <section class="benefits">
+
+    <h2>
+
+      Why Upgrade?
+
+    </h2>
+
+    <div class="benefit-grid">
+
+      <div class="benefit-card">
+
+        <h3>⚡ Faster AI</h3>
+
+        <p>
+
+          Premium users receive
+          priority AI processing
+          and faster note generation.
+
+        </p>
+
+      </div>
+
+      <div class="benefit-card">
+
+        <h3>☁ Unlimited Sync</h3>
+
+        <p>
+
+          Access your notes anywhere
+          with secure cloud storage
+          and syncing.
+
+        </p>
+
+      </div>
+
+      <div class="benefit-card">
+
+        <h3>🧠 Smarter Summaries</h3>
+
+        <p>
+
+          Advanced summarization
+          powered by improved AI models.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2025 NoteNova AI
+
+  </footer>
+
+  <!-- AUTH -->
+
+  <script>
+
+    const authArea =
+      document.getElementById(
+        "authArea"
+      );
+
+    const user =
+      JSON.parse(
+        localStorage.getItem(
+          "loggedInUser"
+        )
+      );
+
+    if (user) {
+
+      authArea.innerHTML = `
+        <a href="profile.html">
+          Profile
+        </a>
+      `;
+
+    } else {
+
+      authArea.innerHTML = `
+        <a href="login.html">
+          Login
+        </a>
+      `;
+
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Management | NoteNova AI</title>
+
+  <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <h1 class="brand-title">
+
+      <span class="logo-n-nav">
+
+        <img src="bcaecf6e-263d-4a7d-95c4-0d7856e9bc27.png" alt="Logo">
+
+      </span>
+
+      oteNova AI
+
+    </h1>
+
+    <nav>
+
+      <a href="Home.html">Home</a>
+
+      <a href="product.html">Product</a>
+
+      <a href="test.html">Management</a>
+
+      <a href="sub.html">Premium</a>
+
+      <a href="c2.html">Contact</a>
+
+      <span id="authArea"></span>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h2>
+        Meet The Leadership Team
+      </h2>
+
+      <p>
+
+        The minds behind NoteNova AI
+        building the future of AI-powered
+        note taking and productivity.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- TEAM -->
+
+  <section class="team-section">
+
+    <div class="team-grid">
+
+      <!-- CARD 1 -->
+
+      <div class="team-card">
+
+        <div class="card-glow"></div>
+
+        <img src="ceo.jpg" alt="CEO">
+
+        <h3>Name</h3>
+
+        <p class="role">
+
+          Founder & CEO
+
+        </p>
+
+        <p class="desc">
+
+          Visionary behind Whisper AI Pen,
+          focused on building the next
+          generation of AI note systems.
+
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="team-card">
+
+        <div class="card-glow"></div>
+
+        <img src="cto.jpg" alt="CTO">
+
+        <h3>Name</h3>
+
+        <p class="role">
+
+          Chief Technology Officer
+
+        </p>
+
+        <p class="desc">
+
+          Leads AI engineering,
+          speech recognition,
+          and smart summarization systems.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <h2>
+
+      Innovating The Future
+
+    </h2>
+
+    <p>
+
+      NoteNova AI is redefining
+      how students and professionals
+      capture information.
+
+    </p>
+
+    <button>
+
+      Join The Vision
+
+    </button>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2025 NoteNova AI
+
+  </footer>
+
+  <!-- AUTH -->
+
+  <script>
+
+    const authArea =
+      document.getElementById(
+        "authArea"
+      );
+
+    const user =
+      JSON.parse(
+        localStorage.getItem(
+          "loggedInUser"
+        )
+      );
+
+    if (user) {
+
+      authArea.innerHTML = `
+        <a href="profile.html">
+          Profile
+        </a>
+      `;
+
+    } else {
+
+      authArea.innerHTML = `
+        <a href="login.html">
+          Login
+        </a>
+      `;
+
+    }
+
+  </script>
+
+</body>
+
+</html>

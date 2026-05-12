@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | NoteNova AI</title>
+
+  <link rel="stylesheet" href="c2.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <h1 class="brand-title">
+
+      <span class="logo-n-nav">
+
+        <img src="bcaecf6e-263d-4a7d-95c4-0d7856e9bc27.png" alt="Logo">
+
+      </span>
+
+      oteNova AI
+
+    </h1>
+
+    <nav>
+
+      <a href="Home.html">Home</a>
+
+      <a href="product.html">Product</a>
+
+      <a href="test.html">Management</a>
+
+      <a href="sub.html">Premium</a>
+
+      <a href="c2.html">Contact</a>
+
+      <span id="authArea"></span>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+
+        Contact NoteNova AI
+
+      </h1>
+
+      <p>
+
+        Let’s build the future
+        of AI-powered note taking
+        together.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact-section">
+
+    <div class="contact-card">
+
+      <div class="card-glow"></div>
+
+      <h2>
+
+        Send Us A Message
+
+      </h2>
+
+      <p class="sub-text">
+
+        We usually reply within 24 hours.
+
+      </p>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="040f503c-e6b9-4ea0-aafb-39f7a6f29652">
+
+        <div class="input-group">
+
+          <input type="text" name="name" required>
+
+          <label>
+
+            Full Name
+
+          </label>
+
+        </div>
+
+        <div class="input-group">
+
+          <input type="email" name="email" required>
+
+          <label>
+
+            Email Address
+
+          </label>
+
+        </div>
+
+        <div class="input-group">
+
+          <input type="tel" name="phone" pattern="[0-9]{10}" required>
+
+          <label>
+
+            Phone Number
+
+          </label>
+
+        </div>
+
+        <div class="input-group">
+
+          <textarea rows="5" name="message" required></textarea>
+
+          <label>
+
+            Your Message
+
+          </label>
+
+        </div>
+
+        <button type="submit">
+
+          Send Message
+
+        </button>
+
+      </form>
+
+      <div class="contact-info">
+
+        <div class="info-box">
+
+          <h3>📧 Email</h3>
+
+          <p>
+            support@notenova.ai
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>📍 Location</h3>
+
+          <p>
+            Chennai, India
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2025 NoteNova AI
+
+  </footer>
+
+  <!-- AUTH -->
+
+  <script>
+
+    const authArea =
+      document.getElementById(
+        "authArea"
+      );
+
+    const user =
+      JSON.parse(
+        localStorage.getItem(
+          "loggedInUser"
+        )
+      );
+
+    if (user) {
+
+      authArea.innerHTML = `
+        <a href="profile.html">
+          Profile
+        </a>
+      `;
+
+    } else {
+
+      authArea.innerHTML = `
+        <a href="login.html">
+          Login
+        </a>
+      `;
+
+    }
+
+  </script>
+
+</body>
+
+</html>

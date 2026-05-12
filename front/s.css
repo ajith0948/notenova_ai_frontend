@@ -1,0 +1,499 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+
+body {
+
+    font-family: "Segoe UI", sans-serif;
+
+    background: #f4f6f8;
+
+    color: #0a2540;
+
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 40px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    backdrop-filter: blur(16px);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* BRAND */
+
+.brand-title {
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    font-size: 1.7rem;
+    font-weight: 800;
+
+    color: #0a2540;
+
+    line-height: 1;
+
+    transform:
+        translateX(-2px);
+}
+
+/* LOGO */
+
+.logo-n-nav img {
+
+    width: 34px;
+    height: 34px;
+
+    object-fit: contain;
+
+    transform:
+        translateY(0px) scale(1.4);
+
+    transform-origin: left center;
+
+    display: block;
+}
+
+/* NAV */
+
+nav {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+/* LINKS */
+
+.navbar a {
+
+    text-decoration: none;
+
+    color: #0a2540;
+
+    font-weight: 600;
+
+    padding: 10px 18px;
+
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover {
+
+    background:
+        linear-gradient(135deg,
+            #007bff,
+            #00c6ff);
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 123, 255, 0.25);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 48vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 25px;
+
+    background:
+        linear-gradient(135deg,
+            #0a2540,
+            #143d6b);
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    background:
+        radial-gradient(rgba(0, 198, 255, 0.3),
+            transparent 70%);
+
+    top: -120px;
+    right: -120px;
+}
+
+.hero-content {
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+
+    font-size: 3.8rem;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    color: #dbeafe;
+
+    font-size: 1.1rem;
+}
+
+/* ================= PRICING ================= */
+
+.pricing-section {
+
+    padding: 90px 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-card {
+
+    width: 420px;
+
+    background: white;
+
+    border-radius: 35px;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.06);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.08);
+
+    transition: 0.35s;
+}
+
+.pricing-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 24px 45px rgba(0, 123, 255, 0.15);
+}
+
+/* BADGE */
+
+.premium-badge {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    background:
+        linear-gradient(90deg,
+            #007bff,
+            #00c6ff);
+
+    color: white;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* TITLE */
+
+.pricing-card h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+}
+
+/* PRICE */
+
+.price {
+
+    font-size: 4rem;
+
+    font-weight: 800;
+
+    color: #007bff;
+
+    margin-bottom: 35px;
+}
+
+.price span {
+
+    font-size: 1.1rem;
+
+    color: #666;
+}
+
+/* LIST */
+
+.pricing-card ul {
+
+    list-style: none;
+
+    margin-bottom: 40px;
+}
+
+.pricing-card li {
+
+    margin: 18px 0;
+
+    color: #444;
+
+    font-size: 1.02rem;
+}
+
+/* BUTTON */
+
+.subscribe-btn {
+
+    display: inline-block;
+
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(90deg,
+            #007bff,
+            #0056b3);
+
+    color: white;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.subscribe-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 14px 25px rgba(0, 123, 255, 0.25);
+}
+
+/* ================= BENEFITS ================= */
+
+.benefits {
+
+    padding: 40px 40px 100px;
+
+    text-align: center;
+}
+
+.benefits h2 {
+
+    font-size: 2.6rem;
+
+    margin-bottom: 50px;
+}
+
+.benefit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 28px;
+}
+
+.benefit-card {
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 16px 30px rgba(0, 123, 255, 0.12);
+}
+
+.benefit-card h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 1.3rem;
+}
+
+.benefit-card p {
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #0d1117;
+
+    color: #9aa4b2;
+
+    text-align: center;
+
+    padding: 24px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        padding: 18px 20px;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+    .navbar a {
+
+        padding: 8px 14px;
+
+        font-size: 14px;
+    }
+
+    .brand-title {
+
+        font-size: 1.45rem;
+    }
+
+    .logo-n-nav img {
+
+        width: 34px;
+        height: 34px;
+
+        transform:
+            translateY(0px) scale(1.3);
+    }
+
+    .hero {
+
+        padding: 80px 22px;
+    }
+
+    .hero h1 {
+
+        font-size: 2.6rem;
+    }
+
+    .pricing-card {
+
+        width: 100%;
+
+        padding: 45px 28px;
+    }
+
+    .price {
+
+        font-size: 3.2rem;
+    }
+
+    .benefits {
+
+        padding: 30px 22px 80px;
+    }
+
+}

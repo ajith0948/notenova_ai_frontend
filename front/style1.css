@@ -1,0 +1,457 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+
+body {
+
+  font-family: "Segoe UI", sans-serif;
+
+  background: #f4f6f8;
+
+  color: #0a2540;
+
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 40px;
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(16px);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.05);
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* BRAND */
+
+.brand-title {
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+
+  font-size: 1.7rem;
+  font-weight: 800;
+
+  color: #0a2540;
+
+  line-height: 1;
+
+  transform:
+    translateX(-2px);
+}
+
+/* LOGO */
+
+.logo-n-nav img {
+
+  width: 38px;
+  height: 38px;
+
+  object-fit: contain;
+
+  transform:
+    translateY(-1px) scale(1.4);
+
+  transform-origin: left center;
+
+  display: block;
+}
+
+/* NAV */
+
+nav {
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+/* LINKS */
+
+.navbar a {
+
+  text-decoration: none;
+
+  color: #0a2540;
+
+  font-weight: 600;
+
+  padding: 10px 18px;
+
+  border-radius: 14px;
+
+  transition: 0.3s ease;
+
+  display: flex;
+  align-items: center;
+}
+
+/* HOVER */
+
+.navbar a:hover {
+
+  background:
+    linear-gradient(135deg,
+      #007bff,
+      #00c6ff);
+
+  color: white;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(0, 123, 255, 0.25);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+
+  min-height: 45vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+
+  background:
+    linear-gradient(135deg,
+      #0a2540,
+      #143d6b);
+
+  color: white;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  background:
+    radial-gradient(rgba(0, 198, 255, 0.3),
+      transparent 70%);
+
+  top: -120px;
+  right: -120px;
+}
+
+.hero-content {
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+
+  font-size: 3.6rem;
+
+  margin-bottom: 20px;
+}
+
+.hero p {
+
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.8;
+
+  color: #dbeafe;
+
+  font-size: 1.1rem;
+}
+
+/* ================= TEAM ================= */
+
+.team-section {
+
+  padding: 90px 40px;
+}
+
+.team-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 35px;
+}
+
+/* TEAM CARD */
+
+.team-card {
+
+  position: relative;
+
+  background: white;
+
+  border-radius: 30px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition: 0.35s;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* GLOW */
+
+.card-glow {
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  background:
+    radial-gradient(rgba(0, 123, 255, 0.18),
+      transparent 70%);
+
+  top: -120px;
+  right: -120px;
+}
+
+.team-card:hover {
+
+  transform:
+    translateY(-10px);
+
+  box-shadow:
+    0 18px 35px rgba(0, 123, 255, 0.14);
+}
+
+/* IMAGE */
+
+.team-card img {
+
+  width: 140px;
+  height: 140px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid white;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12);
+
+  margin-bottom: 24px;
+}
+
+/* TEXT */
+
+.team-card h3 {
+
+  font-size: 1.7rem;
+
+  margin-bottom: 10px;
+}
+
+.role {
+
+  color: #007bff;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.desc {
+
+  line-height: 1.8;
+
+  color: #555;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+
+  padding: 90px 30px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(135deg,
+      #0a2540,
+      #102f5e);
+
+  color: white;
+}
+
+.cta h2 {
+
+  font-size: 2.7rem;
+
+  margin-bottom: 20px;
+}
+
+.cta p {
+
+  color: #dbeafe;
+
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.cta button {
+
+  padding: 15px 34px;
+
+  border: none;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(90deg,
+      #007bff,
+      #00c6ff);
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cta button:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 12px 24px rgba(0, 123, 255, 0.3);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+
+  background: #0d1117;
+
+  color: #9aa4b2;
+
+  text-align: center;
+
+  padding: 24px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px) {
+
+  .navbar {
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 18px 20px;
+  }
+
+  nav {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 8px;
+  }
+
+  .navbar a {
+
+    padding: 8px 14px;
+
+    font-size: 14px;
+  }
+
+  .brand-title {
+
+    font-size: 1.45rem;
+  }
+
+  .logo-n-nav img {
+
+    width: 34px;
+    height: 34px;
+
+    transform:
+      translateY(0px) scale(1.3);
+  }
+
+  .hero {
+
+    padding: 80px 20px;
+  }
+
+  .hero h2 {
+
+    font-size: 2.4rem;
+  }
+
+  .team-section {
+
+    padding: 70px 22px;
+  }
+
+  .team-card {
+
+    padding: 35px 24px;
+  }
+
+}
