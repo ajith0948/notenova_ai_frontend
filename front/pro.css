@@ -36,9 +36,14 @@ body {
 }
 
 .logo-n-nav img {
-    width: 38px;
-    height: 38px;
+    
+    width: 34px;
+    height: 34px;
     object-fit: contain;
+    transform:
+        transalatey(0px) scale(1.4);
+    transform-origin: lrft-center;
+    display: block;
 }
 
 nav a {
