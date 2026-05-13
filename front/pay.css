@@ -38,7 +38,7 @@ body {
 .logo-n-nav img {
     width: 34px;
     height: 34px;
-    transform: translateY(-3px) scale(1.4);
+    transform: translateY(3px) scale(1.4);
     transform-origin: left center;
 }
 
