@@ -31,9 +31,22 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 700;
+    transform:
+        translateX(-4px);
+    font-weight: 800;
+    /* IMPORTANT: makes it bulky */
+
+    color: #0a2540;
+    /* dark navy like first design */
 }
+.brand-text {
+    transform: translateX(-5px);
+    font-size: 1.7rem;
+    font-weight: 9000;
+}
+
 
 .logo-n-nav img {
     
@@ -45,6 +58,7 @@ body {
     transform-origin: lrft-center;
     display: block;
 }
+
 
 nav a {
     margin-left: 24px;
