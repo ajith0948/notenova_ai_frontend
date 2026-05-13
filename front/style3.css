@@ -83,7 +83,7 @@ body {
   object-fit: contain;
 
   transform:
-    translateY(0px) translateX(-2px) scale(1.4);
+    translateY(1px) translateX(0px) scale(1.4);
 
   transform-origin: left center;
 
@@ -181,6 +181,7 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 /* Keeps the N and 'otes' perfectly aligned */
 .n-wrapper {
   display: flex;
@@ -197,7 +198,7 @@ nav {
   object-fit: contain;
 
   transform:
-    translateY(6px) scale(1.45);
+    translateY(3px) translateX(-5.5px) scale(1.45);
 
   transform-origin: left center;
 }
@@ -422,8 +423,8 @@ footer {
     width: 36px;
     height: 36px;
     /* Changed translateY to -1px (moves it 1px down) */
-    transform: translateY(-1px) scale(1.2); 
-    margin-right: -4px; 
+    transform: translateY(-1px) scale(1.2);
+    margin-right: -4px;
   }
 
   nav {
@@ -447,21 +448,23 @@ footer {
 
   .tagline {
     display: flex;
-    flex-direction: column; /* Forces the two lines to stack! */
+    flex-direction: column;
+    /* Forces the two lines to stack! */
     align-items: center;
     justify-content: center;
     font-size: 2.3rem;
     line-height: 1.2;
-    gap: 8px; /* Space between the top line and bottom line */
+    gap: 8px;
+    /* Space between the top line and bottom line */
   }
-  
 
- .logo-n img {
+
+  .logo-n img {
     width: 44px;
     height: 44px;
     /* Added translateX(1px) to move right, and changed scale from 1.15 to 1.25 */
-    transform: translateY(6px) translateX(1px) scale(1.25); 
-    margin-right: -2px; 
+    transform: translateY(6px) translateX(1px) scale(1.25);
+    margin-right: -2px;
   }
 
   .hero-text p {
@@ -477,8 +480,19 @@ footer {
   }
 
   /* 3. OTHER SECTION FIXES */
-  .features { padding: 60px 22px; }
-  .feature-card { padding: 24px; }
-  .cta { padding: 70px 22px; }
-  .cta h2 { font-size: 2rem; }
+  .features {
+    padding: 60px 22px;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  .cta {
+    padding: 70px 22px;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
 }
