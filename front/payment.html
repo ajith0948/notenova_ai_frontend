@@ -95,51 +95,57 @@
         }
 
         // 2. Handle Payment Report
-        async function reportPayment() {
-            // Get the value they typed in the box
-            const txnIdValue = document.getElementById("txnId").value.trim();
+        // 2. Handle Payment Report (PLAN B: BYPASS RENDER FIREWALL)
+    async function reportPayment() {
+      const txnIdValue = document.getElementById("txnId").value.trim();
 
-            // Stop them if the box is empty
-            if (!txnIdValue) {
-                alert("Please enter your Transaction ID before submitting!");
-                return;
-            }
+      if (!txnIdValue) {
+        alert("Please enter your Transaction ID before submitting!");
+        return;
+      }
 
-            const btn = document.getElementById("paidBtn");
-            const loader = document.getElementById("loader");
+      const btn = document.getElementById("paidBtn");
+      const loader = document.getElementById("loader");
 
-            btn.disabled = true;
-            loader.style.display = "block";
+      btn.disabled = true;
+      loader.style.display = "block";
 
-            try {
-                // --- UPDATED RENDER URL HERE ---
-                const response = await fetch("https://notenova-backend-pznb.onrender.com/api/auth/request-premium", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    // Send BOTH the email and the transaction ID
-                    body: JSON.stringify({
-                        email: user.email,
-                        transactionId: txnIdValue
-                    })
-                });
+      try {
+        // We are now sending the data straight to Web3Forms, skipping your backend!
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            // 🚨 PASTE YOUR KEY ON THE LINE BELOW 🚨
+            access_key: "31d6b4dc-95e5-430e-88a2-09706b697948", 
+            subject: `🚨 Premium Payment Request from ${user.name}`,
+            Message: "A user claims to have paid for Premium. Please verify the transaction ID below in your bank app, then go to MongoDB Atlas to upgrade their account to true.",
+            User_Name: user.name,
+            User_Email: user.email,
+            Transaction_ID: txnIdValue
+          })
+        });
 
-                const data = await response.json();
+        const data = await response.json();
 
-                if (response.ok) {
-                    alert(data.message);
-                    window.location.href = "profile.html";
-                } else {
-                    alert("Error: " + data.message);
-                    btn.disabled = false;
-                    loader.style.display = "none";
-                }
-            } catch (error) {
-                alert("Server error. Please try again later.");
-                console.log(error);
-                btn.disabled = false;
-                loader.style.display = "none";
-            }
+        if (response.ok) {
+          alert("Payment reported successfully! Please allow up to 7 business days for manual verification.");
+          window.location.href = "profile.html"; 
+        } else {
+          alert("Error sending verification. Please try again.");
+          btn.disabled = false;
+          loader.style.display = "none";
         }
+      } catch (error) {
+        alert("Network error. Please try again later.");
+        console.log(error);
+        btn.disabled = false;
+        loader.style.display = "none";
+      }
+    }
     </script>
 
 </body>
