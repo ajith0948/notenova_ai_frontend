@@ -34,7 +34,7 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     transform:
-        translateX(-4px);
+        translateX(-4px) scale(1.4);
     font-weight: 800;
     /* IMPORTANT: makes it bulky */
 
