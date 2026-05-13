@@ -83,7 +83,7 @@ body {
   object-fit: contain;
 
   transform:
-    translateY(0px) scale(1.4);
+    translateY(0px) translateX(-2px) scale(1.4);
 
   transform-origin: left center;
 
