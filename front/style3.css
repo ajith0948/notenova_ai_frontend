@@ -421,8 +421,9 @@ footer {
   .logo-n-nav img {
     width: 36px;
     height: 36px;
-    transform: translateY(-2px) scale(1.2);
-    margin-right: -4px; /* Pulls 'oteNova' tightly into the 'N' */
+    /* Changed translateY to -1px (moves it 1px down) */
+    transform: translateY(-1px) scale(1.2); 
+    margin-right: -4px; 
   }
 
   nav {
@@ -455,11 +456,12 @@ footer {
   }
   
 
-  .logo-n img {
+ .logo-n img {
     width: 44px;
     height: 44px;
-    transform: translateY(3px) scale(1.15);
-    margin-right: -2px; /* Pulls 'otes' tightly into the 'N' */
+    /* Added translateX(1px) to move right, and changed scale from 1.15 to 1.25 */
+    transform: translateY(3px) translateX(1px) scale(1.25); 
+    margin-right: -2px; 
   }
 
   .hero-text p {
