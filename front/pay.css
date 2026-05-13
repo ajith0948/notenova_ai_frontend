@@ -44,7 +44,14 @@ body {
 
 nav {
     display: flex;
+    align-items: center; /* ADD THIS LINE */
     gap: 12px;
+}
+
+/* ADD THIS NEW BLOCK */
+#authArea {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
