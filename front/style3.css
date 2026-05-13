@@ -460,7 +460,7 @@ footer {
     width: 44px;
     height: 44px;
     /* Added translateX(1px) to move right, and changed scale from 1.15 to 1.25 */
-    transform: translateY(3px) translateX(1px) scale(1.25); 
+    transform: translateY(-1px) translateX(1px) scale(1.25); 
     margin-right: -2px; 
   }
 
